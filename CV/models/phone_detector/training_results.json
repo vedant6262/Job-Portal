@@ -1,0 +1,10 @@
+{
+  "epochs_requested": 100,
+  "epochs_completed": 100,
+  "final_training_loss": 0.690371036529541,
+  "final_validation_loss": 0.6831689476966858,
+  "best_model": "C:\\Users\\vedan\\OneDrive\\Desktop\\CV\\models\\phone_detector\\best_model.keras",
+  "model": "C:\\Users\\vedan\\OneDrive\\Desktop\\CV\\models\\phone_detector\\phone_detector.keras",
+  "backup": "C:\\Users\\vedan\\OneDrive\\Desktop\\CV\\models\\phone_detector\\phone_detector.backup.keras",
+  "training_history_csv": "C:\\Users\\vedan\\OneDrive\\Desktop\\CV\\models\\phone_detector\\training_history.csv"
+}

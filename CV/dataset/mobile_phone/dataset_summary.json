@@ -1,0 +1,40 @@
+{
+  "total_images": 600,
+  "valid_images": 584,
+  "valid_phone_images": 296,
+  "valid_no_phone_images": 288,
+  "annotated_phone_objects": 296,
+  "invalid_images": [],
+  "invalid_count": 0,
+  "duplicates": [
+    "nophone_1792229016280532000.jpg duplicates nophone_1792229016249934800.jpg",
+    "nophone_1792229017852313100.jpg duplicates nophone_1792229017785438700.jpg",
+    "nophone_1792229018609868300.jpg duplicates nophone_1792229018582994500.jpg",
+    "nophone_1792229022284222100.jpg duplicates nophone_1792229022264417000.jpg",
+    "nophone_1792229023438584700.jpg duplicates nophone_1792229023401975000.jpg",
+    "nophone_1792229024501280700.jpg duplicates nophone_1792229024460890000.jpg",
+    "nophone_1792229025210951000.jpg duplicates nophone_1792229025196174300.jpg",
+    "nophone_1792229026509927300.jpg duplicates nophone_1792229026479060800.jpg",
+    "nophone_1792229028411874000.jpg duplicates nophone_1792229028345551700.jpg",
+    "nophone_1792229041491319400.jpg duplicates nophone_1792229041458684100.jpg",
+    "nophone_1792229042554037200.jpg duplicates nophone_1792229042522355700.jpg",
+    "nophone_1792229046132295300.jpg duplicates nophone_1792229046065617000.jpg",
+    "phone_1792228899099137900.jpg duplicates phone_1792228899075680800.jpg",
+    "phone_1792228906913894900.jpg duplicates phone_1792228906883983500.jpg",
+    "phone_1792228931628069500.jpg duplicates phone_1792228931619167500.jpg",
+    "phone_1792228957464978500.jpg duplicates phone_1792228957428695500.jpg"
+  ],
+  "duplicate_count": 16,
+  "splits": {
+    "train": 409,
+    "val": 88,
+    "test": 87
+  },
+  "split_ratios": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "seed": 42,
+  "ready": true
+}

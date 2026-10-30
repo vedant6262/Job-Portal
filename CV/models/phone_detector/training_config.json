@@ -1,0 +1,32 @@
+{
+  "framework": "tensorflow",
+  "model_type": "custom_phone_detector",
+  "image_size": [
+    256,
+    192
+  ],
+  "stride": 8,
+  "grid": [
+    24,
+    32
+  ],
+  "epochs": 100,
+  "batch_size": 4,
+  "learning_rate": 0.001,
+  "seed": 42,
+  "split_ratios": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "confidence_threshold": 0.1,
+  "early_stopping_patience": 20,
+  "augmentation": [
+    "horizontal_flip",
+    "brightness",
+    "contrast",
+    "saturation"
+  ],
+  "lr_schedule": "cosine_decay",
+  "backbone": "conv stride-8 + dilated(2,4,8)"
+}
