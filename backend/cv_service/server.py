@@ -25,7 +25,7 @@ from pathlib import Path
 DEFAULT_CV_ROOT = Path(__file__).resolve().parents[2] / "CV"
 CV_ROOT = Path(os.environ.get("CV_DIR", DEFAULT_CV_ROOT)).resolve()
 HOST = os.environ.get("CV_SERVICE_HOST", "127.0.0.1")
-PORT = int(os.environ.get("CV_SERVICE_PORT", "5001"))
+PORT = int(os.environ.get("CV_SERVICE_PORT", os.environ.get("PORT", "5001")))
 SERVICE_VERSION = "7"
 MAX_IMAGE_BYTES = 8 * 1024 * 1024
 PERSON_REFRESH_SECONDS = 2.0

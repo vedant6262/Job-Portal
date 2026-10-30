@@ -2,7 +2,10 @@ const { spawn, spawnSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-const CV_SERVICE_URL = (process.env.CV_SERVICE_URL || 'http://127.0.0.1:5001').replace(/\/+$/, '');
+const RAW_CV_SERVICE_URL = (process.env.CV_SERVICE_URL || 'http://127.0.0.1:5001').replace(/\/+$/, '');
+const CV_SERVICE_URL = /^https?:\/\//i.test(RAW_CV_SERVICE_URL)
+  ? RAW_CV_SERVICE_URL
+  : `https://${RAW_CV_SERVICE_URL}`;
 const SERVICE_SCRIPT = path.resolve(__dirname, '../../cv_service/server.py');
 const CV_ROOT = path.resolve(__dirname, '../../../CV');
 const EXPECTED_VERSION = '7';

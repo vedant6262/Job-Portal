@@ -1,0 +1,27 @@
+FROM python:3.11-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    TF_CPP_MIN_LOG_LEVEL=2 \
+    DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update -y \
+    && apt-get install -y --no-install-recommends \
+        libgl1 libglib2.0-0 libsm6 libxext6 libxrender1 ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY CV/requirements.txt /app/CV/requirements.txt
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir -r /app/CV/requirements.txt
+
+COPY CV /app/CV
+COPY backend/cv_service /app/backend/cv_service
+
+ENV CV_DIR=/app/CV \
+    CV_SERVICE_HOST=0.0.0.0
+
+EXPOSE 5001
+
+CMD ["python", "/app/backend/cv_service/server.py"]
